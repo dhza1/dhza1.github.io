@@ -121,6 +121,27 @@
                 width: 55px;
                 height: 55px;
             }
+
+            .song_playerdiv {
+                color: white;
+                align-items: center;
+                border: 3px solid black;
+                border-radius:5px;
+                width: 15%;
+            }
+
+            .song_player_btns {
+                align-items: center;
+                border: 3px solid black;
+                border-radius: 5px;
+            }
+
+            .song_player_btn {
+                background-color: #323232;
+                color: white;
+                border-radius: 10px;
+                font-size: 15px;
+            }
         </style>
     </head>
     <body class="body">
@@ -129,6 +150,14 @@
             <div class="mainbox">
                 <img src="static/pfp.png" class="mypfp"></img>
                 <span class="usernamelabel">dhza</span>
+                <div class="song_playerdiv">
+                    <p id="songName" style="margin-left: 20px;">SONG NAME</p>
+                    <div class="song_player_btns">
+                        <button class="song_player_btn">back</button>
+                        <button class="song_player_btn">pause/play</button>
+                        <button class="song_player_btn" onclick="next_song()">next</button>
+                    </div>
+                </div>
             </div>
             <div class="biodiv">
                 <p class="biop">C++ and Python developer</p>
@@ -140,10 +169,6 @@
                 <button onclick="redirect_discord()" class="social_btn"><img src="static/discord_removebg.png" class="social_img"></img></button>
                 <button onclick="redirect_discord()" class="social_btn"><img src="static/github.png" class="social_img"></img></button>
             </div>
-            <audio id="audioPlayer" autoplay>
-              <source id="audioSource" src="" type="audio/mp3">
-              Your browser does not support the audio element.
-            </audio>
         </div>
 
     </body>

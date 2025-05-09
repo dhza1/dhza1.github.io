@@ -4,11 +4,11 @@ function redirect_discord() {
 
 const songs = [
   "static/умираю (prod. Dj fullcola666 ).mp3",
-  "static/Take The L.mp3",
-  "static/Walk in the cold.mp3",
-  "static/Ева - Vintage (_lonely lonely I guess I_m lonely_) [HARDSTYLE] (SLOWED_REVERB).mp3",
+  "static/Walk in the cold - Dayerteq.mp3",
+  "static/PDD - dj trippie flameboy.mp3",
+  "static/Ева - Vintage.mp3",
   "static/[DJ CIGAN X DJ PEDOPHILE X DJ PIČKA] KAI ANGEL - MILLIONS.mp3",
-  "static/PDD.mp3",
+  "static/Take The L - dj trippie flameboy.mp3",
 ];
 
 function redirect_github() {
@@ -27,8 +27,24 @@ function play_random_song() {
   audio.src = song;
   audio.play();
 }
+index = 0;
+max_index = songs.length;
+function play_song() {
+  // update the fucking song fucking label
+  document.getElementById("songName").textContent = songs[index]
+    .replace(".mp3", "")
+    .replace("static/", "");
+  // play the fucking song with the fucking index
+  audio.src = songs[index];
+  audio.play();
+}
 
-document.addEventListener("click", () => {
-  console.log("beep!");
-  play_random_song();
-});
+function next_song() {
+  if (index + 1 <= songs.length) {
+    index++;
+    play_song();
+  } else {
+    index = 0;
+    play_song();
+  }
+}
