@@ -26,6 +26,11 @@
                 padding: 20px;
                 margin-right: 20px;
                 gap: 20px;
+                margin: 0 auto;
+                text-align: center;
+                width: 100%;
+                justify-content: center;
+                justify-items: center;
             }
             .mypfp {
                 gap: 20px;
@@ -80,15 +85,20 @@
                 width: 40%;
                 display: inline-block;
                 white-space: nowrap;
+                margin: 0 auto;
+                text-align: center;
             }
 
             .biop {
                 color: white;
                 font-size: 20px;
                 margin-left: 15px;
+                margin: 0 auto;
             }
 
-
+            .socialsspan {
+                margin-top: 20px;
+            }
 
             .socialsdiv {
                 height: auto;
@@ -97,6 +107,9 @@
                 width: 50%;
                 height: 100px;
                 justify-content: center;
+                margin: 0 auto;
+                justify-items: center;
+                text-align: center;
             }
 
             .social_btn {
@@ -171,7 +184,7 @@
                 <p class="biop">reverse engineering enthusiast</p>
                 <p class="biop">(maybe) updated local ip: 192.168.0.11</p>
             </div>
-            <span class="biop">my socials: </span>
+            <span class="biop socialsspan">my socials: </span>
             <div class="socialsdiv">
                 <button onclick="redirect_discord()" class="social_btn"><img src="static/discord_removebg.png" class="social_img"></img></button>
                 <button onclick="redirect_discord()" class="social_btn"><img src="static/github.png" class="social_img"></img></button>
