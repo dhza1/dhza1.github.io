@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <style>
+
+            @keyframes bgMove {
+                0% {background-color: #242323}
+                25% {background-color: #424242}
+                50% {background-color: #242323}
+                75% {background-color: #000000}
+                100% {background-color: #363636}
+            }
+            .body {
+                /* background: linear-gradient(-90deg, #3b3b3b, #0a0a0a, #bdbdbd); */
+                align-items: center;
+                animation: bgMove 5s linear infinite;
+                justify-items: center;
+            }
+
+
+            .mainbox {
+                padding-left: 30px;
+                display: flex;
+                align-items: top;
+                position: relative;
+                padding: 20px;
+                margin-right: 20px;
+                gap: 20px;
+            }
+            .mypfp {
+                gap: 20px;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+            }
+
+            @keyframes colorShift {
+                0% {color: red;}
+                25% {color: blue;}
+                50% {color: purple;}
+                75% {color: aqua;}
+                100% {color: red;}
+            }
+
+            .usernamelabel {
+                font-size: 30px;
+                margin-top: 20px;
+                margin-right: 20px;
+                animation: colorShift 4s linear infinite;
+            }
+
+            .usernamediv {
+                /* useless div but keep it here */
+                align-items: center;
+            }
+
+            .testdiv {
+                border-radius: 10px;
+                border: 3px solid black;
+                /* background-color: rgba(139, 139, 140, 0.3); */
+                padding-left: 30px;
+                display: flex;
+                align-items: top;
+                position: relative;
+                padding: 20px;
+                /* padding-left: 100px; */
+                /* padding-right: 100px; */
+                width: 95%;
+                height: 90%;
+                gap: 20px;
+                flex-direction: column;
+                position: absolute;
+            }
+
+
+            .biodiv {
+                color: white;
+                border: 3px solid black;
+                border-radius: 10px;
+                width: 40%;
+                display: inline-block;
+                white-space: nowrap;
+            }
+
+            .biop {
+                color: white;
+                font-size: 20px;
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="testdiv">
+            <div class="mainbox">
+                <img src="/static/pfp.png" class="mypfp"></img>
+                <span class="usernamelabel">dhza</span>
+            </div>
+            <div class="biodiv">
+                <p class="biop">C++ and Python developer</p>
+                <p class="biop">reverse engineering enthusiast</p>
+                <p class="biop">(maybe) updated local ip: 192.168.0.11</p>
+            </div>
+        </div>
+
+    </body>
+</html>
