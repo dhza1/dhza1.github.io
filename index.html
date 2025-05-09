@@ -91,33 +91,35 @@
 
             .socialsdiv {
                 height: auto;
-                align-items: top;
+                align-items: center;
+                border: 3px solid #181818;
+                width: 50%;
+                justify-content: center;
             }
 
             .social_btn {
                 background-color: rgba(0,0,0,0);
-                width: 60px;
-                padding-right: 20px;
-                height: 50px;
+                width: 70px;
+                height: 60px;
             }
 
             @keyframes socialbtn_border {
                 0% {
-                    border: 3px solid white;
+                    background-color: white;
                 }
                 100% {
-                    border: 3px solid red;
+                    background-color: red;
                 }
             }
 
             .social_btn:hover {
                 border-radius: 10px;
-                animation: socialbtn_border 3s ease;
+                animation: socialbtn_border 1s ease;
             }
 
             .social_img {
                 width: 55px;
-                margin-right: 25px;
+                height: 55px;
             }
         </style>
     </head>
@@ -134,8 +136,9 @@
                 <p class="biop">(maybe) updated local ip: 192.168.0.11</p>
             </div>
             <span class="biop">my socials: </span>
-            <div>
+            <div class="socialsdiv">
                 <button onclick="redirect_discord()" class="social_btn"><img src="static/discord_removebg.png" class="social_img"></img></button>
+                <button onclick="redirect_discord()" class="social_btn"><img src="static/github.png" class="social_img"></img></button>
             </div>
         </div>
 
