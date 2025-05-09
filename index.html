@@ -93,6 +93,32 @@
                 height: auto;
                 align-items: top;
             }
+
+            .social_btn {
+                background-color: rgba(0,0,0,0);
+                width: 60px;
+                padding-right: 20px;
+                height: 50px;
+            }
+
+            @keyframes socialbtn_border {
+                0% {
+                    border: 3px solid white;
+                }
+                100% {
+                    border: 3px solid red;
+                }
+            }
+
+            .social_btn:hover {
+                border-radius: 10px;
+                animation: socialbtn_border 3s ease;
+            }
+
+            .social_img {
+                width: 55px;
+                margin-right: 25px;
+            }
         </style>
     </head>
     <body class="body">
@@ -107,8 +133,9 @@
                 <p class="biop">reverse engineering enthusiast</p>
                 <p class="biop">(maybe) updated local ip: 192.168.0.11</p>
             </div>
+            <span class="biop">my socials: </span>
             <div>
-                <button onclick="redirect_discord()"><img src="static/discord.png"></img></button>
+                <button onclick="redirect_discord()" class="social_btn"><img src="static/discord_removebg.png" class="social_img"></img></button>
             </div>
         </div>
 
