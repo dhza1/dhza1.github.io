@@ -68,8 +68,10 @@ function back_button() {
 
 function play_button() {
   if (playing) {
+    document.getElementById("pausebtn").textContent = "▶️";
     playing = false;
   } else {
+    document.getElementById("pausebtn").textContent = "⏸️";
     playing = true;
   }
   play_song();

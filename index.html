@@ -95,27 +95,31 @@
                 align-items: center;
                 border: 3px solid #181818;
                 width: 50%;
+                height: 100px;
                 justify-content: center;
             }
 
             .social_btn {
                 background-color: rgba(0,0,0,0);
                 width: 70px;
+                transition: margin-top 0.3s ease;
                 height: 60px;
             }
 
             @keyframes socialbtn_border {
                 0% {
                     background-color: white;
+                    margin-top: 0px;
                 }
                 100% {
                     background-color: red;
+                    margin-top: 20px;
                 }
             }
 
             .social_btn:hover {
                 border-radius: 10px;
-                animation: socialbtn_border 1s ease;
+                margin-top: 20px;
             }
 
             .social_img {
@@ -127,6 +131,7 @@
                 color: white;
                 align-items: center;
                 border: 3px solid black;
+                margin-left: 50px;
                 border-radius:5px;
                 width: 15%;
             }
@@ -141,8 +146,9 @@
                 background-color: #323232;
                 color: white;
                 border-radius: 10px;
-                font-size: 15px;
+                font-size: 20px;
             }
+
         </style>
     </head>
     <body class="body">
@@ -154,9 +160,9 @@
                 <div class="song_playerdiv">
                     <p id="songName" style="margin-left: 20px;">SONG NAME</p>
                     <div class="song_player_btns">
-                        <button class="song_player_btn" onclick="back_button()">back</button>
-                        <button class="song_player_btn" onclick="play_button()">pause/play</button>
-                        <button class="song_player_btn" onclick="next_song()">next</button>
+                        <button class="song_player_btn" onclick="back_button()">⏮️</button>
+                        <button class="song_player_btn" onclick="play_button()" id="pausebtn">▶️</button>
+                        <button class="song_player_btn" onclick="next_song()">⏭️</button>
                     </div>
                 </div>
             </div>
