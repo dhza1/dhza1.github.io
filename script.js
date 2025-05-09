@@ -16,17 +16,18 @@ function redirect_github() {
 }
 
 function get_random_song() {
-  return songs[Math.random() * songs.length];
+  return songs[Math.floor(Math.random() * songs.length)];
 }
 
 const audio = new Audio();
 
 function play_random_song() {
   const song = get_random_song();
+  console.log(song);
   audio.src = song;
   audio.play();
 }
 
-audio.addEventListener("ended", play_random_song());
-
-window.onload = play_random_song();
+document.addEventListener("click", () => {
+  play_random_song();
+});
