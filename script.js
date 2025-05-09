@@ -29,22 +29,48 @@ function play_random_song() {
 }
 index = 0;
 max_index = songs.length;
+playing = true;
 function play_song() {
-  // update the fucking song fucking label
-  document.getElementById("songName").textContent = songs[index]
-    .replace(".mp3", "")
-    .replace("static/", "");
-  // play the fucking song with the fucking index
-  audio.src = songs[index];
-  audio.play();
+  if (playing) {
+    // update the fucking song fucking label
+    document.getElementById("songName").textContent = songs[index]
+      .replace(".mp3", "")
+      .replace("static/", "");
+    // play the fucking song with the fucking index
+    audio.src = songs[index];
+    audio.play();
+  } else {
+    document.getElementById("songName").textContent = songs[index]
+      .replace(".mp3", "")
+      .replace("static/", "");
+    audio.src = songs[index];
+    audio.pause();
+  }
 }
 
 function next_song() {
   if (index + 1 <= songs.length) {
     index++;
-    play_song();
   } else {
     index = 0;
-    play_song();
   }
+  play_song();
+}
+
+function back_button() {
+  if (index - 1 >= 0) {
+    index--;
+  } else {
+    index = songs.length - 1;
+  }
+  play_song();
+}
+
+function play_button() {
+  if (playing) {
+    playing = false;
+  } else {
+    playing = true;
+  }
+  play_song();
 }
