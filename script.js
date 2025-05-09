@@ -29,5 +29,6 @@ function play_random_song() {
 }
 
 document.addEventListener("click", () => {
+  console.log("beep!");
   play_random_song();
 });
