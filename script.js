@@ -74,3 +74,6 @@ function play_button() {
   }
   play_song();
 }
+window.onload = function () {
+  play_song();
+};
