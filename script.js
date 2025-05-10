@@ -78,4 +78,15 @@ function play_button() {
 }
 window.onload = function () {
   play_song();
+  document.getElementById("Projects").value = "default";
 };
+
+function handleSelection(option) {
+  console.log(option.value);
+  if (option.value == "dobfuscator") {
+    window.location.href = "https://github.com/dhza1/dobfuscator";
+  } else if ((option.value = "archpkgmgr")) {
+    window.location.href =
+      "https://github.com/dhza1/dhza-stupid-package-manger";
+  }
+}
