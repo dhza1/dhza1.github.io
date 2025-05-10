@@ -13,7 +13,7 @@
             .body {
                 /* background: linear-gradient(-90deg, #3b3b3b, #0a0a0a, #bdbdbd); */
                 align-items: center;
-                animation: bgMove 5s ease infinite;
+                animation: bgMove 8s ease infinite;
                 justify-items: center;
             }
 
@@ -216,6 +216,22 @@
                 width: fit-content; /* Allow it to take up only as much space as it needs */
                 min-width: 250px; /* Ensure it has a reasonable minimum width */
             }
+
+            @keyframes Twitch {
+                0% {margin-left: 10px}
+                20% {margin-left: -20px}
+                40% {margin-left: -10px}
+                80% {margin-left: 5px}
+                90% {margin-left: -5px}
+
+            }
+            .twitch {
+
+            }
+
+            .twitch:hover {
+                animation: Twitch 0.8s linear;
+            }
         </style>
         <title>dhza's stupid ebio</title>
     </head>
@@ -223,7 +239,7 @@
         <script src="script.js"></script>
         <div class="testdiv">
             <div class="mainbox">
-                <div class="projects_div">
+                <div class="projects_div twitch">
                     <label for="Projects" class="left biop move_up">My Projects:</label>
                     <select id="Projects" class="left" style="margin-top: 30px" onchange="handleSelection(this)">
                         <option value="default">Select a project</option>
