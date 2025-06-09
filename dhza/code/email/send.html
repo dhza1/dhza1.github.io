@@ -1,0 +1,25 @@
+<head>
+    <style>
+        .send {
+            background: black;
+            text-color: white;
+        }
+        .send textarea {
+            text-color: white;
+            padding: 50px;
+        }
+        .send label {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="send">
+        <form action="/api/send_email" method="post">
+            <label>To: <input type="text" name="to" /></label><br />
+            <label>From: <input type="text" name="from" /></label><br />
+            <label>Message:<textarea name="message"></textarea></label><br />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
